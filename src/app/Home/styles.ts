@@ -42,6 +42,6 @@ export const styles = StyleSheet.create({
   clearText:{
     fontSize: 12,
     color: "#828282",
-    fontWeight: 600
+    fontWeight: 600,
   }
 });

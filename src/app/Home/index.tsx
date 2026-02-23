@@ -24,7 +24,7 @@ export function Home() {
       
       ))}
       <TouchableOpacity style={styles.clearButton}>
-        <Text styles={styles.clearText}>Limpar</Text>
+        <Text style={styles.clearText}>Limpar</Text>
       </TouchableOpacity>
       </View>
     </View>
