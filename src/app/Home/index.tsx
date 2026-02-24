@@ -4,6 +4,7 @@ import Button from "@/components/Button";
 import Input from "@/components/Input";
 import Filter from "@/components/Filter";
 import { FilterStatus } from "@/types/FilterStatus";
+import Itemn from "@/components/Item";
 
 const FILTER_STATUS: FilterStatus[] = [FilterStatus.PEDING, FilterStatus.DONE];
 
@@ -27,6 +28,9 @@ export function Home() {
         <Text style={styles.clearText}>Limpar</Text>
       </TouchableOpacity>
       </View>
+      <Itemn data={{status: FilterStatus.DONE, description: "Café"}} 
+      onRemove={()=> console.log("Remover")}
+       onStatus={()=> console.log("mudar status")}/>
     </View>
     </View>
   );
