@@ -52,6 +52,17 @@ setItems(response)
 Alert.alert("Erro:", "Não foi possível filtrar os items.")
   }
 }
+
+async function handleRemove(id:string) {
+  try{
+await itemsStorage.remove(id)
+await itemsByStatus()
+  }catch(error){
+    console.log(error);
+    Alert.alert("Remover", "Não foi possível remover.")
+    
+  }
+}
 useEffect(()=>{
 itemsByStatus()
 }, [filter])
@@ -88,7 +99,7 @@ itemsByStatus()
           renderItem={({ item }) => (
             <Item
               data={item}
-              onRemove={() => console.log("Remover")}
+              onRemove={() => handleRemove(item.id)}
               onStatus={() => console.log("mudar status")}
             />
           )}
